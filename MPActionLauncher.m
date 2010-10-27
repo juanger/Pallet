@@ -36,7 +36,7 @@ static MPActionLauncher *sharedActionLauncher = nil;
 
 - (void)loadPorts {
     [self setIsLoading:YES];
-    NSDictionary *allPorts = [[MPMacPorts sharedInstance] search:MPPortsAll];
+    NSDictionary *allPorts = [[MPMacPorts sharedInstance] listAll];
     NSDictionary *installedPorts = [[MPRegistry sharedRegistry] installed];
     
     [self willChangeValueForKey:@"ports"];
